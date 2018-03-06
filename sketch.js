@@ -30,11 +30,13 @@ function playTrack(){
 	console.log(audio);
 
 	audio.play();
-}
+};
 
 
-function stopTrack(){
-	audio.stop();
+function pauseTrack() {
+	audio = audio;
+	audio.pause();
+	// audio.currentTime = currentTime;
 }
 
 

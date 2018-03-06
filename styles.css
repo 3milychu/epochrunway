@@ -7,9 +7,15 @@ html, body {
 	margin:0;
 }
 
+a {
+	text-decoration:none;
+	color:white;
+}
+
 .header {
 	float:right;
 	margin:1%;
+	margin-top:-20%;
 }
 
 h1 {
@@ -44,7 +50,7 @@ h1 {
 	position:relative;
 	margin:auto;
 	height:100%;
-	margin-top:-2%;
+	margin-top:-30%;
 }
 
 #decor-top, #decor-bottom {
@@ -308,29 +314,44 @@ h1 {
 }
 
 .controls {
-	position:relative;
+	position:absolute;
+	width:3%;
+	height:20%;
 	display:block;
+	float:left;
+	z-index:200;
 }
 
-#refresh {
+.refresh {
 	background-color:#666666;
 	color:white;
 	text-align:center;
-	width:5%;
-	padding:0.5%;
+	width:100%;
+	padding:10%;
 	top:0;
 	left:0;
-	position:absolute;
+	position:relative
 	font-size:2em;
 	cursor:pointer;
 }
 
-#refresh:hover {
-	color: #C7B299;
+.refresh:hover, .play:hover, .stop:hover, .previous:hover, .next:hover {
+	background-color: #C7B299;
+}
+
+.play, .stop, .previous, .next{
+	background-color:#666666;
+	color:white;
+	text-align:center;
+	width:100%;
+	padding:10%;
+	left:0;
+	font-size:1em;
+	cursor:pointer;
+	font-family: 'EB Garamond', serif;
 }
 
 .caption {
-	position:absolute;
 	margin-left:78%;
 	margin-top:20%;
 
