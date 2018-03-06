@@ -205,8 +205,8 @@ h1 {
 	width:80px;
 	margin-left:40%;
 	margin-top:35%;
-	animation: twist 10s infinite;
-	-webkit-animation: twist 10s infinite;
+	animation: twist 0.55s infinite;
+	-webkit-animation: twist 0.55s infinite;
 	transition:opacity 0.1s;
 	-webkit-transition: opacity 0.1s;
 }
@@ -216,8 +216,8 @@ h1 {
 	width:100px;
 	margin-left:45%;
 	margin-top:30%;
-	animation: twist 10s infinite;
-	-webkit-animation: twist 10s infinite;
+	animation: twist 0.55s infinite;
+	-webkit-animation: twist 0.55s infinite;
 	transition:opacity 0.1s;
 	-webkit-transition: opacity 0.1s;
 }
@@ -245,13 +245,9 @@ h1 {
 }
 
 @keyframes twist {
-	0% {opacity:1;transform: scaleX(1);}
-	49% {opacity:1;transform: scaleX(1);}
-	50% {opacity:0; transform: scaleX(-1);}
-	51% {opacity:1; transform: scaleX(-1);}
-	98% {opacity:1; transform: scaleX(-1);}
-	99% {opacity:0; transform: scaleX(1);}
-	100% {opacity:1; transform: scaleX(1);}
+	0% {opacity:1;transform: rotate(-5deg);}
+	50% {opacity:1; transform: rotate(5deg);}
+	100% {opacity:1; transform: rotate(-5deg);}
 }
 
 @keyframes jump-one {
@@ -351,12 +347,13 @@ h1 {
 	75%{opacity:0;}
 	90% {opacity:0;}
 	95% {opacity:0;}
+	96% {opacity:1;}
 	100% {opacity:1;}
 }
 
 /*Food faces*/
 
-.Italian, .American, .French, .British {
+.Italian, .American, .French, .British, .European {
 	position:absolute;
 	width:100%;
 	height:50%;
@@ -383,6 +380,12 @@ h1 {
 
 .British {
 	background:url('assets/British.png');
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+
+.European {
+	background:url('assets/European.png');
 	background-size:100%;
 	background-repeat:no-repeat;
 }
@@ -460,6 +463,27 @@ h1 {
 	font-style:italic;
 	width:100%;
 }
+
+.mobileDisplay{
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.mobileMessage {
+    margin:auto;
+    text-align:center;
+    vertical-align:middle;
+    padding:30%;
+    display:block;
+    margin-top:10%;
+}
+
+.mobileMessage p {
+    font-size:2em;
+    display:block;
+}
+
 
  @media screen and (max-width:1000px) {
  	.header {

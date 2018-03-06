@@ -4,9 +4,7 @@ function setup(){
 
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 		document.getElementById("mobile").style.display="inline";
-		document.getElementById("title").style.display="none";
-		document.getElementById("top").style.display="none";
-		document.getElementById("arrow").style.display="none";
+		document.getElementById("main").style.display="none";
 	};
 
 	noCanvas();
@@ -19,7 +17,7 @@ function setup(){
 
 	window.setInterval(function(){
 	getFact();
-	}, 5000);
+	}, 10000);
 
 	window.setInterval(function(){
 	updateStart();
@@ -51,9 +49,10 @@ function getFact() {
 	{key: "2", value: "P.S. Eggs are American, Crossaints are French, Spaghetti is Italian and Soup is British."},
 	{key: "3", value: "About half of these suits are American and the rest are French, British or Italian."},
 	{key: "4", value: "All suits at the MET date between 1700s to 2000s."},
+	{key: "5", value: "Oh, and generally European is the tomato/noodle medley."},
 	];
 
-	var random = Math.floor((Math.random() * 3+1));
+	var random = Math.floor((Math.random() * 4+1));
 	console.log("fact"+random)
 
 	d3.select(".caption-fact").selectAll("text").remove();
