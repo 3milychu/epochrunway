@@ -1,3 +1,5 @@
+var audio;
+
 function setup(){
 
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -13,7 +15,27 @@ function setup(){
 
 	updateStart();
 
+	playTrack();
+
+	window.setInterval(function(){
+	updateStart();
+	}, 15000);
+
 	};
+
+function playTrack(){
+	mytrack = str("track"+ Math.floor(Math.random() * 7+1));
+
+	audio = new Audio('audio/' + mytrack +'.mp3');
+	console.log(audio);
+
+	audio.play();
+}
+
+
+function stopTrack(){
+	audio.stop();
+}
 
 
 function getInfo(){
@@ -84,7 +106,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -99,7 +121,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -114,7 +136,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -129,7 +151,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	var randomEnsemble = Math.floor((Math.random() * fullbody.length) + 0);
@@ -144,7 +166,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -158,7 +180,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	var randomHeadwear = Math.floor((Math.random() * head.length) + 0);
@@ -172,7 +194,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	d3.select(".top-head").selectAll("img").remove();
@@ -184,7 +206,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	d3.select(".bottom-head").selectAll("img").remove();
@@ -196,7 +218,7 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/png/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	        // end getcsv

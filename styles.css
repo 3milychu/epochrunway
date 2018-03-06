@@ -1,5 +1,10 @@
-body {
+html, body {
 	font-family: 'EB Garamond', serif;
+	top:0;
+	left:0;
+	padding:0;
+	width:100%;
+	margin:0;
 }
 
 .header {
@@ -39,6 +44,7 @@ h1 {
 	position:relative;
 	margin:auto;
 	height:100%;
+	margin-top:-2%;
 }
 
 #decor-top, #decor-bottom {
@@ -88,7 +94,7 @@ h1 {
 }
 
 #decor-bottom{
-	margin-top:0%;
+	margin-top:-1%;
 	animation: dip-up 10s infinite;
 	-webkit-animation: dip-up 10s infinite;
 }
@@ -259,10 +265,10 @@ h1 {
 }
 
 @keyframes dip-up {
-	0% {margin-top:-3%;}
-	10% {margin-top:-3%;}
+	0% {margin-top:-1%;}
+	10% {margin-top:-1%;}
 	50% {margin-top:-20%;}
-	100% {margin-top:-3%;}
+	100% {margin-top:-1%;}
 }
 
 @keyframes dip-down {
@@ -301,6 +307,52 @@ h1 {
 	width:100%;
 }
 
+.controls {
+	position:relative;
+	display:block;
+}
+
+#refresh {
+	background-color:#666666;
+	color:white;
+	text-align:center;
+	width:5%;
+	padding:0.5%;
+	top:0;
+	left:0;
+	position:absolute;
+	font-size:2em;
+	cursor:pointer;
+}
+
+#refresh:hover {
+	color: #C7B299;
+}
+/*
+#play {
+	background-color:#666666;
+	color:white;
+	text-align:center;
+	width:1%;
+	padding:0.5%;
+	margin-top:6%;
+	left:0;
+	font-size:0.2em;
+	cursor:pointer;
+}
+
+#stop {
+	background-color:#666666;
+	color:white;
+	text-align:center;
+	width:1%;
+	padding:0.5%;
+	margin-top:6%;
+	margin-left:2%;
+	font-size:0.2em;
+	cursor:pointer;
+	letter-spacing: 0.3em;
+}*/
 
  @media screen and (max-width:1000px) {
  	.header {
