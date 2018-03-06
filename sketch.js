@@ -154,6 +154,16 @@ function updateStart() {
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
+	d3.select(".caption-feet").selectAll("text").remove();
+
+	var displayFootwear = d3.select(".caption-feet").selectAll("#caption-feet")
+	        .data(footwear.filter(function (d, i) { return i === randomFootwear;}))
+	        .enter()
+	        .append("text")
+	        .attr("id", "featured-footwear")
+	        .text(function(d) { return d.Title + ", " + d.objectBegin + ", " + d.Culture;})
+	        .exit();
+
 	var randomEnsemble = Math.floor((Math.random() * fullbody.length) + 0);
 
 	for (i=0;i<9;i++){
@@ -181,6 +191,16 @@ function updateStart() {
 	        .style("background-position","center")
 	        .style("background-size","30%")
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
+	        .exit();
+
+	d3.select(".caption-fullbody").selectAll("text").remove();
+
+	var displayEnsemble = d3.select(".caption-fullbody").selectAll("#caption-fullbody")
+	        .data(fullbody.filter(function (d, i) { return i === randomEnsemble;}))
+	        .enter()
+	        .append("text")
+	        .attr("id", "featured-ensemble")
+	        .text(function(d) { return d.Title + ", " + d.objectBegin + ", " + d.Culture;})
 	        .exit();
 
 	var randomHeadwear = Math.floor((Math.random() * head.length) + 0);
@@ -219,6 +239,16 @@ function updateStart() {
 	        .style("background-position","center")
 	        .style("background-size","30%")
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
+	        .exit();
+
+	d3.select(".caption-head").selectAll("text").remove();
+
+	var displayHeadwear = d3.select(".caption-head").selectAll("#caption-head")
+	        .data(head.filter(function (d, i) { return i === randomHeadwear;}))
+	        .enter()
+	        .append("text")
+	        .attr("id", "featured-headwear")
+	        .text(function(d) { return d.Title + ", " + d.objectBegin + ", " + d.Culture;})
 	        .exit();
 
 	        // end getcsv

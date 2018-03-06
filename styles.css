@@ -328,31 +328,29 @@ h1 {
 #refresh:hover {
 	color: #C7B299;
 }
-/*
-#play {
-	background-color:#666666;
-	color:white;
-	text-align:center;
-	width:1%;
-	padding:0.5%;
-	margin-top:6%;
-	left:0;
-	font-size:0.2em;
-	cursor:pointer;
+
+.caption {
+	position:absolute;
+	margin-left:78%;
+	margin-top:20%;
+
 }
 
-#stop {
-	background-color:#666666;
-	color:white;
-	text-align:center;
-	width:1%;
-	padding:0.5%;
-	margin-top:6%;
-	margin-left:2%;
-	font-size:0.2em;
-	cursor:pointer;
-	letter-spacing: 0.3em;
-}*/
+.caption h2 {
+	font-weight:600;
+	text-transform:uppercase;
+	font-size:0.8em;
+	color: #666666;
+	letter-spacing:0.2em;
+}
+
+.caption text {
+	font-family: 'EB Garamond', serif;
+	font-weight:400;
+	font-size:1em;
+	color: #AD9B85;
+	font-style:italic;
+}
 
  @media screen and (max-width:1000px) {
  	.header {
