@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sensory Accessories</title>
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600,800" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/styles4.css">
+	<script src="https://d3js.org/d3.v4.js"></script>
+	<script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="libraries/p5.js"></script>
+	<script type="text/javascript" src="libraries/p5.dom.js"></script>
+	<script type="text/javascript" src="js/sketch5.js"></script>
+</head>
+<body>
+
+<!-- Mobile message -->
+	<div class="mobileDisplay" id="mobile">
+		<div class="mobileMessage">
+			<h1>We're Sorry!</h1>
+			<p>Epoch Runway is a desktop experience. Remember to visit us next time you are comfortably situated in front of
+			your desktop companion! https://3milychu.github.io/epochrunway</p>
+		</div>
+	</div>
+
+<!-- Featuring -->
+	<div class="caption">
+		<div class="caption-fact" id="caption-fact">
+			<text>SENSORY ACCESSORIES</text>
+		</div>
+	</div>
+
+<!-- Controls -->
+	<div class="controls">
+		<div class=refresh><a onclick="updateStart()">⟳</a></div>
+		<div class=play onclick="playTrack()">&#9658;</div>
+		<div class=stop onclick="pauseTrack()">&#10074;&#10074;</div>
+		<a href="suits.html"><div class="previous">&#8249;</div></a>
+		<a href="start.html"><div class="next">&#8250;</div></a>
+	</div>
+
+<!-- Begin main -->
+	<div class="container">
+
+		<!-- Hand Accessories -->
+		<div class="hand">
+			<img id="limb-hand" src="assets/hand.png">
+			<div class="hand1" id="hand1"></div>
+			<div class="hand2" id="hand2"></div>
+			<div class="hand3" id="hand3"></div>
+			<div class="hand4" id="hand4"></div>
+			<div class="hand5" id="hand5"></div>
+			<div class="hand6" id="hand6"></div>
+			<div class="hand7" id="hand7"></div>
+			<div class="hand8" id="hand8"></div>
+
+		</div>
+
+		<!-- Leg Accessories -->
+		<div class="leg">
+			<img id="limb-leg" src="assets/legs.png">
+			<div class="leg1" id="leg1"></div>
+			<div class="leg2" id="leg2"></div>
+			<div class="leg3" id="leg3"></div>
+			<div class="leg4" id="leg4"></div>
+		</div>
+
+		<!-- Ear Accessories -->
+		<div class="ear">
+			<div class="ear1" id="ear1"></div>
+			<div class="ear2" id="ear2"></div>
+			<div class="ear3" id="ear3"></div>
+			<div class="ear4" id="ear4"></div>
+			<div class="ear5" id="ear5"></div>
+			<div class="ear6" id="ear6"></div>
+			<img id="limb-ear" src="assets/ears.png">
+		</div>
+
+	</div>
+
+</body>
+</html>
