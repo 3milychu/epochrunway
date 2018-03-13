@@ -8,7 +8,6 @@ function preload() {
 	  		
 	  		data = data;
 
-
 			for (i=0;i<data.length;i++) {
 				var myImage = new Image();
 				// we will call this function when the image has finished loading

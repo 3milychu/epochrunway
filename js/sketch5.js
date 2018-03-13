@@ -26,7 +26,7 @@ function setup(){
 function playTrack(){
 	// mytrack = str("track"+ Math.floor(Math.random() * 7+1));
 
-	audio = new Audio('audio/' + "track8" +'.m4a');
+	audio = new Audio('audio/' + "track9" +'.mp3');
 	console.log(audio);
 
 	audio.play();
