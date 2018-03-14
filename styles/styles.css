@@ -398,15 +398,15 @@ h1 {
 	position:relative;
 	margin:auto;
 	height:100%;
-	margin-top:-30%;
+	margin-top:-20%;
 	margin-left:0%;
 	}
 	#featured {
 	position:absolute;
 	height:300px;
 	width:100px;
-	margin-top:-26%;
-	margin-left:39%;
+	margin-top:-22%;
+	margin-left:38%;
 	transform:rotate(-10deg);
 	z-index:101;
 	}
