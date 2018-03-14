@@ -19,7 +19,7 @@ function preload() {
 				    my_image.onload = notify_complete;
 
 				    // load the image
-				    my_image.src = function(d) {return "../assets/" + d.folder + "/" + d.img + ".png";};
+				    my_image.src = function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img + ".png";};
 				};
 
 			};
@@ -114,7 +114,7 @@ function getHeadwear() {
 	        .style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "../assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -152,7 +152,7 @@ function getTops() {
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "../assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -189,7 +189,7 @@ function getBottoms() {
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "../assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -227,7 +227,7 @@ function getEnsembles() {
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "../assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -265,7 +265,7 @@ function getFeet() {
 	        .style("max-height","80px")
 	        .style("background-position","center")
 	        .style("vertical-align","middle")
-	        .attr("src",function(d) {return "../assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -303,7 +303,7 @@ function getAcc() {
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "../assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};

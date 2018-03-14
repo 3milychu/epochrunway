@@ -97,38 +97,84 @@ function updateStart() {
 	var randomFootwear = Math.floor((Math.random() * footwear.length) + 0);
 
 	for (i=0;i<9;i++){
-		d3.select(".wheelbox"+[i]).selectAll("img").remove();
+		d3.select(".wheelbox"+[i]).selectAll("a").remove();
 		var featuredFootwear = d3.select(".wheelbox"+[i]).selectAll("#wheelbox"+[i])
 			.data(footwear.filter(function (d, i) { return i === randomFootwear;}))
 	        .enter()
+	        .append('a')
+	        .attr("class","wheelbox-link"+[i])
+	        .attr("id","wheelbox-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
+
+	};
+
+	for (i=0;i<9;i++){
+		d3.select(".wheelbox-link"+[i]).selectAll("img").remove();
+		var featuredFootwear = d3.select(".wheelbox-link"+[i]).selectAll("#wheelbox-link"+[i])
+			.data(footwear.filter(function (d, i) { return i === randomFootwear;}))
+	        .enter()
 	        .append('img')
 	        .style("width","100%")
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
 
 	for (i=1;i<3;i++){
-		d3.select(".top-feet"+[i]).selectAll("img").remove();
+		d3.select(".top-feet"+[i]).selectAll("a").remove();
 		var featuredFootwear = d3.select(".top-feet"+[i]).selectAll("#top-feet"+[i])
 			.data(footwear.filter(function (d, i) { return i === randomFootwear;}))
 	        .enter()
+	        .append('a')
+	       	.attr("class","top-feet-link"+[i])
+	        .attr("id","top-feet-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
+
+	};
+
+	for (i=1;i<3;i++){
+		d3.select(".top-feet-link"+[i]).selectAll("img").remove();
+		var featuredFootwear = d3.select(".top-feet-link"+[i]).selectAll("#top-feet-link"+[i])
+			.data(footwear.filter(function (d, i) { return i === randomFootwear;}))
+	        .enter()
 	        .append('img')
 	        .style("width","100%")
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
 
 	for (i=1;i<3;i++){
-		d3.select(".bottom-feet"+[i]).selectAll("img").remove();
+		d3.select(".bottom-feet"+[i]).selectAll("a").remove();
 		var featuredFootwear = d3.select(".bottom-feet"+[i]).selectAll("#bottom-feet"+[i])
+			.data(footwear.filter(function (d, i) { return i === randomFootwear;}))
+	        .enter()
+	        .append('a')
+	       	.attr("class","bottom-feet-link"+[i])
+	        .attr("id","bottom-feet-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
+
+	};
+
+	for (i=1;i<3;i++){
+		d3.select(".bottom-feet-link"+[i]).selectAll("img").remove();
+		var featuredFootwear = d3.select(".bottom-feet-link"+[i]).selectAll("#bottom-feet-link"+[i])
 			.data(footwear.filter(function (d, i) { return i === randomFootwear;}))
 	        .enter()
 	        .append('img')
@@ -136,14 +182,26 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
 
-
-	d3.select(".featured-feet").selectAll("img").remove();
+	d3.select(".featured-feet").selectAll("a").remove();
 		var featuredFootwear = d3.select(".featured-feet").selectAll("#featured-feet")
+			.data(footwear.filter(function (d, i) { return i === randomFootwear;}))
+	        .enter()
+	        .append('a')
+	       	.attr("class","featured-feet-link")
+	        .attr("id","featured-feet-link")
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
+
+	d3.select(".featured-feet-link").selectAll("img").remove();
+		var featuredFootwear = d3.select(".featured-feet-link").selectAll("#featured-feet-link")
 			.data(footwear.filter(function (d, i) { return i === randomFootwear;}))
 	        .enter()
 	        .append('img')
@@ -151,6 +209,8 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
@@ -167,8 +227,22 @@ function updateStart() {
 	var randomEnsemble = Math.floor((Math.random() * fullbody.length) + 0);
 
 	for (i=0;i<9;i++){
-		d3.select(".top-spin"+[i]).selectAll("img").remove();
+		d3.select(".top-spin"+[i]).selectAll("a").remove();
 		var featuredEnsemble= d3.select(".top-spin"+[i]).selectAll("#top-spin"+[i])
+			.data(fullbody.filter(function (d, i) { return i === randomEnsemble;}))
+	        .enter()
+	        .append('a')
+	       	.attr("class","top-spin-link"+[i])
+	        .attr("id","top-spin-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
+
+	};
+
+	for (i=0;i<9;i++){
+		d3.select(".top-spin-link"+[i]).selectAll("img").remove();
+		var featuredEnsemble= d3.select(".top-spin-link"+[i]).selectAll("#top-spin-link"+[i])
 			.data(fullbody.filter(function (d, i) { return i === randomEnsemble;}))
 	        .enter()
 	        .append('img')
@@ -176,13 +250,26 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
 	
-	d3.select(".featured-top").selectAll("img").remove();
+	d3.select(".featured-top").selectAll("a").remove();
 		var featuredEnsemble = d3.select(".featured-top").selectAll("#featured-top")
+			.data(fullbody.filter(function (d, i) { return i === randomEnsemble;}))
+	        .enter()
+	        .append('a')
+	       	.attr("class","featured-top-link")
+	        .attr("id","featured-top-link")
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
+
+	d3.select(".featured-top-link").selectAll("img").remove();
+		var featuredEnsemble = d3.select(".featured-top-link").selectAll("#featured-top-link")
 			.data(fullbody.filter(function (d, i) { return i === randomEnsemble;}))
 	        .enter()
 	        .append('img')
@@ -190,6 +277,8 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
@@ -205,32 +294,44 @@ function updateStart() {
 
 	var randomHeadwear = Math.floor((Math.random() * head.length) + 0);
 
-	d3.select(".featured-head").selectAll("img").remove();
+	d3.select(".featured-head").selectAll("a").remove();
 		var featuredEnsemble = d3.select(".featured-head").selectAll("#featured-head")
 			.data(head.filter(function (d, i) { return i === randomHeadwear;}))
 	        .enter()
+	        .append('a')
+	       	.attr("class","featured-head-link")
+	        .attr("id","featured-head-link")
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
+
+	d3.select(".featured-head-link").selectAll("img").remove();
+		var featuredEnsemble = d3.select(".featured-head-link").selectAll("#featured-head-link")
+			.data(head.filter(function (d, i) { return i === randomHeadwear;}))
+	        .enter()
 	        .append('img')
 	        .style("width","100%")
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
-	d3.select(".top-head").selectAll("img").remove();
+	d3.select(".top-head").selectAll("a").remove();
 		var featuredEnsemble = d3.select(".top-head").selectAll("#top-head")
 			.data(head.filter(function (d, i) { return i === randomHeadwear;}))
 	        .enter()
-	        .append('img')
-	        .style("width","100%")
-	        .style("height","100%")
-	        .style("background-position","center")
-	        .style("background-size","30%")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
+	        .append('a')
+	       	.attr("class","top-head-link")
+	        .attr("id","top-head-link")
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
 	        .exit();
 
-	d3.select(".bottom-head").selectAll("img").remove();
-		var featuredEnsemble = d3.select(".bottom-head").selectAll("#bottom-head")
+	d3.select(".top-head-link").selectAll("img").remove();
+		var featuredEnsemble = d3.select(".top-head-link").selectAll("#top-head-link")
 			.data(head.filter(function (d, i) { return i === randomHeadwear;}))
 	        .enter()
 	        .append('img')
@@ -238,6 +339,33 @@ function updateStart() {
 	        .style("height","100%")
 	        .style("background-position","center")
 	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
+	        .exit();
+
+	d3.select(".bottom-head").selectAll("a").remove();
+		var featuredEnsemble = d3.select(".bottom-head").selectAll("#bottom-head")
+			.data(head.filter(function (d, i) { return i === randomHeadwear;}))
+	        .enter()
+	        .append('a')
+	       	.attr("class","bottom-head-link")
+	        .attr("id","bottom-head-link")
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
+
+	d3.select(".bottom-head-link").selectAll("img").remove();
+		var featuredEnsemble = d3.select(".bottom-head-link").selectAll("#bottom-head-link")
+			.data(head.filter(function (d, i) { return i === randomHeadwear;}))
+	        .enter()
+	        .append('img')
+	        .style("width","100%")
+	        .style("height","100%")
+	        .style("background-position","center")
+	        .style("background-size","30%")
+	        .attr("alt", function(d){return d.Medium})
+	        .attr("title", function(d){return d.Medium})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 

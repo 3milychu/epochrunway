@@ -73,7 +73,7 @@ h1 {
 }
 
 #top-head, #bottom-head {
-	width:40%;
+	width:30%;
 	display:inline-block;
 	margin-left:-15%;
 	vertical-align:middle;
@@ -298,12 +298,12 @@ h1 {
 	height:25%;
 	width:auto;
 	margin-top:50%;
-	z-index:102;
+	z-index:103;
 }
 #featured-top{
 	margin-top:-50%;
 	height:70%;
-	z-index:103;
+	z-index:102;
 	width:auto;
 }
 #featured-feet{

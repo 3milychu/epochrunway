@@ -21,7 +21,7 @@ function setup(){
 
 	window.setInterval(function(){
 	updateStart();
-	}, 14000);
+	}, 3000);
 
 	};
 
@@ -125,12 +125,24 @@ function updateStart() {
 	        .data(suits.filter(function (d, i) { return i === suit;}))
 	        .enter()
 	        .append('div')
+	        .attr("alt", function(d){return d.Culture})
+	        .attr("title", function(d){return d.Culture})
 	        .attr("class", function(d){return d.Culture})
 	        .exit();
 
-	d3.select(".brunch"+[i]).selectAll("img").remove();
+	d3.select(".brunch"+[i]).selectAll("a").remove();
+	var setupLink = d3.select(".brunch"+[i]).selectAll("#brunch"+[i])
+			.data(suits.filter(function (d, i) { return i === suit;}))
+	        .enter()
+	        .append('a')
+	        .attr("class","brunch-link"+[i])
+	        .attr("id","brunch-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
 
-	var displaySuit = d3.select(".brunch"+[i]).selectAll("#brunch"+[i])
+	d3.select(".brunch-link"+[i]).selectAll("img").remove();
+	var displaySuit = d3.select(".brunch-link"+[i]).selectAll("#brunch-link"+[i])
 			.data(suits.filter(function (d, i) { return i === suit;}))
 	        .enter()
 	        .append('img')
@@ -140,6 +152,8 @@ function updateStart() {
 	        .style("vertical-align","middle")
 	        .style("background-position","center")
 	        .style("background-size","100%")
+	       	.attr("alt", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
+	        .attr("title", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .attr("class", "target")
 	        .attr("id", "target1")
@@ -155,12 +169,24 @@ function updateStart() {
 	        .data(suits.filter(function (d, i) { return i === suit2;}))
 	        .enter()
 	        .append('div')
+	        .attr("alt", function(d){return d.Culture})
+	        .attr("title", function(d){return d.Culture})
 	        .attr("class", function(d){return d.Culture})
 	        .exit();
 
-	d3.select(".brunch"+[i]).selectAll("img").remove();
+	d3.select(".brunch"+[i]).selectAll("a").remove();
+	var setupLink2 = d3.select(".brunch"+[i]).selectAll("#brunch"+[i])
+			.data(suits.filter(function (d, i) { return i === suit2;}))
+	        .enter()
+	        .append('a')
+	        .attr("class","brunch-link"+[i])
+	        .attr("id","brunch-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
 
-	var displaySuit = d3.select(".brunch"+[i]).selectAll("#brunch"+[i])
+	d3.select(".brunch-link"+[i]).selectAll("img").remove();
+	var displaySuit = d3.select(".brunch-link"+[i]).selectAll("#brunch-link"+[i])
 			.data(suits.filter(function (d, i) { return i === suit2;}))
 	        .enter()
 	        .append('img')
@@ -170,6 +196,8 @@ function updateStart() {
 	        .style("vertical-align","middle")
 	        .style("background-position","center")
 	        .style("background-size","100%")
+	       	.attr("alt", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
+	        .attr("title", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .attr("class", "target")
 	        .attr("id", "target1")
@@ -188,12 +216,24 @@ function updateStart() {
 	        .data(suits.filter(function (d, i) { return i === jumpingSuit;}))
 	        .enter()
 	        .append('div')
+	        .attr("alt", function(d){return d.Culture})
+	        .attr("title", function(d){return d.Culture})
 	        .attr("class", function(d){return d.Culture})
 	        .exit();
 
-	d3.select(".brunch"+[i]).selectAll("img").remove();
+	d3.select(".brunch"+[i]).selectAll("a").remove();
+	var setupLink3 = d3.select(".brunch"+[i]).selectAll("#brunch"+[i])
+			.data(suits.filter(function (d, i) { return i === jumpingSuit;}))
+	        .enter()
+	        .append('a')
+	        .attr("class","brunch-link"+[i])
+	        .attr("id","brunch-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
 
-	var displaySuit = d3.select(".brunch"+[i]).selectAll("#brunch"+[i])
+	d3.select(".brunch-link"+[i]).selectAll("img").remove();
+	var displaySuit = d3.select(".brunch-link"+[i]).selectAll("#brunch-link"+[i])
 			.data(suits.filter(function (d, i) { return i === jumpingSuit;}))
 	        .enter()
 	        .append('img')
@@ -203,6 +243,8 @@ function updateStart() {
 	        .style("vertical-align","middle")
 	        .style("background-position","center")
 	        .style("background-size","100%")
+	        .attr("alt", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
+	        .attr("title", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .attr("class", "target")
 	        .attr("id", "target1")

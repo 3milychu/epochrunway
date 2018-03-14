@@ -418,3 +418,29 @@ a{
     font-style:italic;
     width:100%;
 }
+
+/*Media Screen*/
+
+ @media screen and (min-width:1920px) {
+    .ear1, .ear2, .ear3, .ear4, .ear5, .ear6 {
+    width:120px;
+    height:120px;
+    }
+    .leg1, .leg2, .leg3, .leg4 {
+    position:absolute;
+    width:120px;
+    height:240px;
+    animation:shrink 10s infinite;
+    }
+    .hand1, .hand3 {
+    width:80px;
+    height:160px;
+    }
+    .hand2, .hand4, .hand5, .hand6,
+    .hand7, .hand8 {
+        width:90px;
+        height:180px;
+    }
+
+
+ }

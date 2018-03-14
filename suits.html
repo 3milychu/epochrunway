@@ -11,6 +11,13 @@
 	<script type="text/javascript" src="libraries/p5.js"></script>
 	<script type="text/javascript" src="libraries/p5.dom.js"></script>
 	<script type="text/javascript" src="js/sketch2.js"></script>
+	<script>
+		$(document).ready(function(){
+    $("div").each(function(){
+        $(this).attr("title", $(this).attr("alt"));
+    });
+});
+	</script>
 </head>
 <body>
 

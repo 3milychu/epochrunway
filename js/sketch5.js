@@ -51,7 +51,7 @@ function updateStart() {
 
 			// Hand Accessories
 			  handAcc = data.filter(function(d) { 
-			    	return d.bodyclass1 == "accessory" && d.bodyclass2 == "hand"});
+			    	return d.bodyclass1 == "accessory" && ( d.bodyclass2 == "hand" || d.bodyclass2 == "arm" || d.bodyclass2 =="wrist" ) });
 
 			// Leg Accessories
 			  legAcc = data.filter(function(d) { 
@@ -65,9 +65,19 @@ function updateStart() {
 	
 	for(i=0;i<9;i++){
 
-	d3.select(".hand"+[i]).selectAll("img").remove();
+	d3.select(".hand"+[i]).selectAll("a").remove();
+	var setupLink = d3.select(".hand"+[i]).selectAll("#hand"+[i])
+			.data(handAcc.filter(function (d, i) { return i === acc;}))
+	        .enter()
+	        .append('a')
+	        .attr("class","hand-link"+[i])
+	        .attr("id","hand-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
 
-	var displayHandAcc = d3.select(".hand"+[i]).selectAll("#hand"+[i])
+	d3.select(".hand-link"+[i]).selectAll("img").remove();
+	var displayHandAcc = d3.select(".hand-link"+[i]).selectAll("#hand-link"+[i])
 			.data(handAcc.filter(function (d, i) { return i === acc;}))
 	        .enter()
 	        .append('img')
@@ -76,6 +86,8 @@ function updateStart() {
 	        .style("background-position","center")
 	        .style("background-size","100%")
 	        .style("z-index","0")
+	        .attr("alt", function(d){return d.Title + ", from " + d.objectBegin})
+	        .attr("title", function(d){return d.Title + ", from " + d.objectBegin})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 	      };
@@ -85,9 +97,19 @@ function updateStart() {
 	
 	for(i=0;i<9;i++){
 
-	d3.select(".leg"+[i]).selectAll("img").remove();
+	d3.select(".leg"+[i]).selectAll("a").remove();
+	var setupLink = d3.select(".leg"+[i]).selectAll("#leg"+[i])
+			.data(legAcc.filter(function (d, i) { return i === acc2;}))
+	        .enter()
+	        .append('a')
+	        .attr("class","leg-link"+[i])
+	        .attr("id","leg-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
 
-	var displayLegAcc = d3.select(".leg"+[i]).selectAll("#leg"+[i])
+	d3.select(".leg-link"+[i]).selectAll("img").remove();
+	var displayLegAcc = d3.select(".leg-link"+[i]).selectAll("#leg-link"+[i])
 			.data(legAcc.filter(function (d, i) { return i === acc2;}))
 	        .enter()
 	        .append('img')
@@ -96,6 +118,8 @@ function updateStart() {
 	        .style("vertical-align","middle")
 	        .style("background-position","center")
 	        .style("background-size","100%")
+	       	.attr("alt", function(d){return d.Title + ", from " + d.objectBegin})
+	        .attr("title", function(d){return d.Title + ", from " + d.objectBegin})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 	      };
@@ -105,9 +129,19 @@ function updateStart() {
 	
 	for(i=0;i<7;i++){
 
-	d3.select(".ear"+[i]).selectAll("img").remove();
+	d3.select(".ear"+[i]).selectAll("a").remove();
+	var setupLink = d3.select(".ear"+[i]).selectAll("#ear"+[i])
+			.data(earAcc.filter(function (d, i) { return i === acc3;}))
+	        .enter()
+	        .append('a')
+	        .attr("class","ear-link"+[i])
+	        .attr("id","ear-link"+[i])
+	        .attr("target","_blank")
+	        .attr("href",function(d) {return d.link;})
+	        .exit();
 
-	var displayEarAcc = d3.select(".ear"+[i]).selectAll("#ear"+[i])
+	d3.select(".ear-link"+[i]).selectAll("img").remove();
+	var displayEarAcc = d3.select(".ear-link"+[i]).selectAll("#ear-link"+[i])
 			.data(earAcc.filter(function (d, i) { return i === acc3;}))
 	        .enter()
 	        .append('img')
@@ -117,6 +151,8 @@ function updateStart() {
 	        .style("background-position","center")
 	        .style("background-size","100%")
 	        .style("z-index","0")
+	        .attr("alt", function(d){return d.Title + ", from " + d.objectBegin})
+	        .attr("title", function(d){return d.Title + ", from " + d.objectBegin})
 	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 	      };
