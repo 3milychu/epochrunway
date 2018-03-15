@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ensemble Catwalk</title>
+	<title>Epoch Runway</title>
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600,800" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles3.css">
 	<script src="https://d3js.org/d3.v4.js"></script>
 	<script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="libraries/p5.js"></script>
 	<script type="text/javascript" src="libraries/p5.dom.js"></script>
-	<script type="text/javascript" src="js/sketch.js"></script>
+	<script src="https://code.createjs.com/preloadjs-0.6.2.min.js"></script>
+	<script type="text/javascript" src="js/sketch4.js"></script>
+<!-- 	<link rel="preload" href="js/preload.js" as="script"> -->
+
 </head>
 <body>
 
@@ -24,89 +27,35 @@
 		</div>
 	</div>
 
-<!-- Start -->
-<div id="main" class="container">
-
-	<!-- Header -->
-	<div class=header>
-		<h1>Ensemble<br>Catwalk</h1>
-<!-- 		<h4>with the<br>
-		Metropolitan Museum of Art</h4> -->
-	</div>
-
-	<!-- Controls -->
-	<div class="controls">
-	<div class=refresh><a onclick="updateStart()">⟳</a></div>
-	<div class=play onclick="playTrack()">&#9658;</div>
-	<div class=stop onclick="pauseTrack()">&#10074;&#10074;</div>
-	<a href="start.html"><div class="previous">&#8249;</div></a>
-	<a href="suits.html"><div class="next">&#8250;</div></a>
-	</div>
-<div class="scene">
-	<!-- Featuring -->
-	<div class="caption">
-		<h2>Headwear</h2>
-		<div class="caption-head" id="caption-head"></div>
-		<h2>Ensemble</h2>
-		<div class="caption-fullbody" id="caption-fullbody"></div>
-		<h2>Footwear</h2>
-		<div class="caption-feet" id="caption-feet"></div>
-	</div>
-
-
-	<!-- Generate seal -->
-
-	<div id="seal">
-
-		<div id="outer-ring">
-			<div id="inner-circle"></div>
-			<div class="wheelbox1" id="wheelbox1"></div>
-			<div class="wheelbox2" id="wheelbox2"></div>
-			<div class="wheelbox3" id="wheelbox3"></div>
-			<div class="wheelbox4" id="wheelbox4"></div>
-			<div class="wheelbox5" id="wheelbox5"></div>
-			<div class="wheelbox6" id="wheelbox6"></div>
-			<div class="wheelbox7" id="wheelbox7"></div>
-			<div class="wheelbox8" id="wheelbox8"></div>
-		</div>
-
-		<div id="rings">
-			<div class="top-spin1" id=top-spin1></div>
-			<div class="top-spin2" id=top-spin2></div>
-			<div class="top-spin3" id=top-spin3></div>
-			<div class="top-spin4" id=top-spin4></div>
-			<div class="top-spin5" id=top-spin5></div>
-			<div class="top-spin6" id=top-spin6></div>
-			<div class="top-spin7" id=top-spin7></div>
-			<div class="top-spin8" id=top-spin8></div>
-		</div>
-
-
-		<div id="decor-top">
-			<div class="top-feet1" id="top-feet1"></div>
-			<div class="top-head" id="top-head"></div>
-			<div class="top-feet2" id="top-feet2"></div>
-		</div>
-
-		<div id="decor-bottom">
-			<div class="bottom-feet1" id="bottom-feet1"></div>
-			<div class="bottom-head" id="bottom-head"></div>
-			<div class="bottom-feet2" id="bottom-feet2"></div>
-		</div>
-
-		<div id=featured>
-			<div class="featured-head" id="featured-head"></div>
-			<div class="featured-top" id="featured-top"></div>
-			<div class="featured-feet" id="featured-feet"></div>
-		</div>
-
-
-</div>	
-	</div>
+<!-- Headwear -->
+<div class="header">
+	<h1>Epoch Runway</h1>
+	<a href="catwalk.html" target="_blank"><div class="button">Start the Show</div></a>
 </div>
 
+<!-- Headwear -->
+<div class="scroll-post-head" id="scroll-post-head">
+</div>
 
-<!-- Suits at Bougie Brunch -->
+<!-- Tops -->
+<div class="scroll-post-top" id="scroll-post-top">
+</div>
+
+<!-- Accessory -->
+<div class="scroll-post-acc" id="scroll-post-acc">
+</div>
+
+<!-- Fullbody -->
+<div class="scroll-post-fullbody" id="scroll-post-fullbody">
+</div>
+
+<!-- Headwear -->
+<div class="scroll-post-bottom" id="scroll-post-bottom">
+</div>
+
+<!-- Headwear -->
+<div class="scroll-post-feet" id="scroll-post-feet">
+</div>
 
 </body>
 </html>

@@ -364,8 +364,11 @@ a{
 }
 
 .refresh {
-    background-color:#666666;
-    color:white;
+    border:0.01em solid #C7B299 ;
+    border-bottom:0px;
+    border-left:0px;
+    background-color:white;
+    color:#C7B299;
     text-align:center;
     width:100%;
     padding:10%;
@@ -378,11 +381,16 @@ a{
 
 .refresh:hover, .play:hover, .stop:hover, .previous:hover, .next:hover {
     background-color: #C7B299;
+    color:white;
 }
 
 .play, .stop, .previous, .next{
-    background-color:#666666;
-    color:white;
+    border:0.01em solid #C7B299 ;
+    border-bottom:0px;
+    border-top:0px;
+    border-left:0px;
+    background-color:white;
+    color:#C7B299;
     text-align:center;
     width:100%;
     padding:10%;
@@ -390,6 +398,9 @@ a{
     font-size:1em;
     cursor:pointer;
     font-family: 'EB Garamond', serif;
+}
+.next{
+    border-bottom:0.01em solid #C7B299 ;
 }
 
 /*Caption*/
