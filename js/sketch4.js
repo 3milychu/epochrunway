@@ -1,33 +1,3 @@
-function preload() {
-
-	d3.csv("https://media.githubusercontent.com/media/3milychu/majorstudio/master/data/clothes/costume_reclass.csv", function(data) {
-	  		data.forEach(function(d) {
-	   			d.objectBegin = +d.objectBegin;
-	   			 });
-	  			// console.log(data);
-	  		
-	  		data = data;
-
-			for (i=0;i<data.length;i++) {
-				var myImage = new Image();
-				// we will call this function when the image has finished loading
-				function notify_complete(){
-					alert('The image has been loaded into the browser cache.');
-				};
-				function load_image(){
-				    // call the notify_complete function when the image has loaded
-				    my_image.onload = notify_complete;
-
-				    // load the image
-				    my_image.src = function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img + ".png";};
-				};
-
-			};
-
-		});
-
-};
-
 function setup(){
 
 	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -110,11 +80,16 @@ function getHeadwear() {
 		var myHeadwear = d3.select(".scroll-post-head").selectAll("#scroll-post-head")
 			.data(headsort)
 	        .enter()
+	        .append('a')
+	        .attr("href",function(d) {return d.link})
+	        .attr("target","_blank")
 	        .append('img')
 	        .style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -144,15 +119,21 @@ function getTops() {
 
 
 	for (i=0;i<topsort.length;i++){
+
 		d3.select(".scroll-post-top").selectAll("img").remove();
 		var myTops = d3.select(".scroll-post-top").selectAll("#scroll-post-top")
 			.data(topsort)
 	        .enter()
+	        // .append('a')
+	        // .attr("href",function(d) {return d.link})
+	        // .attr("target","_blank")
 	        .append('img')
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -189,7 +170,9 @@ function getBottoms() {
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -223,11 +206,16 @@ function getEnsembles() {
 		var myEnsembles = d3.select(".scroll-post-fullbody").selectAll("#scroll-post-fullbody")
 			.data(fullbodysort)
 	        .enter()
+	        // .append('a')
+	        // .attr("href",function(d) {return d.link})
+	        // .attr("target","_blank")
 	        .append('img')
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -260,12 +248,17 @@ function getFeet() {
 		var myFeet = d3.select(".scroll-post-feet").selectAll("#scroll-post-feet")
 			.data(feetsort)
 	        .enter()
+	        // .append('a')
+	        // .attr("href",function(d) {return d.link})
+	        // .attr("target","_blank")
 	        .append('img')
 	       	.style("width","40px")
 	        .style("max-height","80px")
 	        .style("background-position","center")
 	        .style("vertical-align","middle")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};
@@ -299,11 +292,16 @@ function getAcc() {
 		var myAcc = d3.select(".scroll-post-acc").selectAll("#scroll-post-acc")
 			.data(accsort)
 	        .enter()
+	        // .append('a')
+	        // .attr("href",function(d) {return d.link})
+	        // .attr("target","_blank")
 	        .append('img')
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/epochrunway/master/assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
 	        .exit();
 
 	};

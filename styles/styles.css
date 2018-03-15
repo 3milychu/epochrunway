@@ -274,6 +274,7 @@ h1 {
 	0% {margin-top:1%;}
 	10% {margin-top:1%;}
 	50% {margin-top:-20%;}
+	99% {margin-top:1%;}
 	100% {margin-top:1%;}
 }
 
@@ -284,6 +285,13 @@ h1 {
 	100% {margin-top:-40%;}
 }
 
+@keyframes scale {
+	0% {transform:scale(0);opacity:0;}
+	10%	{transform:scale(1);opacity:1;}
+	99%	{transform:scale(1);opacity:1;}
+	100% {transform:scale(0);opacity:0;}
+}
+
 #featured {
 	position:absolute;
 	height:300px;
@@ -292,6 +300,7 @@ h1 {
 	margin-left:42%;
 	transform:rotate(-10deg);
 	z-index:101;
+	animation: scale 15s infinite;
 }
 
 #featured-head {

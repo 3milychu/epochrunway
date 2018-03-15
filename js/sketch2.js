@@ -15,9 +15,9 @@ function setup(){
 
 	playTrack();
 
-	window.setInterval(function(){
-	getFact();
-	}, 10000);
+	// window.setInterval(function(){
+	// getFact();
+	// }, 10000);
 
 	window.setInterval(function(){
 	updateStart();
