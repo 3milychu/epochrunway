@@ -1,5 +1,5 @@
 html, body {
-	font-family: 'EB Garamond', serif;
+	font-family: 'GFS Didot', serif;
 	top:0;
 	left:0;
 	padding:0;
@@ -364,7 +364,7 @@ h1 {
 	left:0;
 	font-size:1em;
 	cursor:pointer;
-	font-family: 'EB Garamond', serif;
+	font-family: 'GFS Didot', serif;
 }
 .next{
 	border-bottom:0.01em solid #C7B299 ;
@@ -385,7 +385,7 @@ h1 {
 }
 
 .caption text {
-	font-family: 'EB Garamond', serif;
+	font-family: 'GFS Didot', serif;
 	font-weight:400;
 	font-size:1em;
 	color: #AD9B85;
@@ -483,7 +483,7 @@ h1 {
 	}
 
 	.caption text {
-		font-family: 'EB Garamond', serif;
+		font-family: 'GFS Didot', serif;
 		font-weight:400;
 		font-size:1.5em;
 		color: #AD9B85;
