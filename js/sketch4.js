@@ -21,11 +21,11 @@ function setup(){
 
 	getAcc();
 	console.log("Accessories are loaded");
-	animatethis($('#scroll-post-acc'),90000);
+	animatethis($('#scroll-post-acc'),150000);
 
 	getEnsembles();
 	console.log("Ensembles are loaded");
-	animatethis($('#scroll-post-fullbody'),90000);
+	animatethis($('#scroll-post-fullbody'),150000);
 
 	getBottoms();
 	console.log("Bottoms are loaded");
