@@ -23,9 +23,9 @@ function setup(){
 	console.log("Accessories are loaded");
 	animatethis($('#scroll-post-acc'),90000);
 
-	// getEnsembles();
-	// console.log("Ensembles are loaded");
-	// animatethis($('#scroll-post-fullbody'),90000);
+	getEnsembles();
+	console.log("Ensembles are loaded");
+	animatethis($('#scroll-post-fullbody'),90000);
 
 	getBottoms();
 	console.log("Bottoms are loaded");
@@ -39,8 +39,8 @@ function setup(){
 
 function animatethis(targetElement, speed) {
     var scrollWidth = $(targetElement).get(0).scrollWidth;
-    // var clientWidth = $(targetElement).get(0).clientWidth;
-    $(targetElement).animate({ scrollLeft: scrollWidth },
+    var clientWidth = $(targetElement).get(0).clientWidth;
+    $(targetElement).animate({ scrollLeft: scrollWidth},
     {
         duration: speed,
         complete: function () {
@@ -75,7 +75,7 @@ function getHeadwear() {
 			  console.log(headsort.length);
 
 
-	for (i=0;i<headsort.length;i++){
+	// for (i=0;i<headsort.length;i++){
 		d3.select(".scroll-post-head").selectAll("img").remove();
 		var myHeadwear = d3.select(".scroll-post-head").selectAll("#scroll-post-head")
 			.data(headsort)
@@ -89,10 +89,10 @@ function getHeadwear() {
 	        .style("background-position","center")
 	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
-	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
 
-	};
+	// };
 	
 	        // end getcsv
 			});
@@ -118,25 +118,25 @@ function getTops() {
 			  console.log(topsort.length);
 
 
-	for (i=0;i<topsort.length;i++){
+	// for (i=0;i<topsort.length;i++){
 
 		d3.select(".scroll-post-top").selectAll("img").remove();
 		var myTops = d3.select(".scroll-post-top").selectAll("#scroll-post-top")
 			.data(topsort)
 	        .enter()
-	        // .append('a')
-	        // .attr("href",function(d) {return d.link})
-	        // .attr("target","_blank")
+	        .append('a')
+	        .attr("href",function(d) {return d.link})
+	        .attr("target","_blank")
 	        .append('img')
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
 	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
-	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
 
-	};
+	// };
 	
 	        // end getcsv
 			});
@@ -161,7 +161,7 @@ function getBottoms() {
 			  console.log(bottomsort.length);
 
 
-	for (i=0;i<bottomsort.length;i++){
+	// for (i=0;i<bottomsort.length;i++){
 		d3.select(".scroll-post-bottom").selectAll("img").remove();
 		var myBottoms = d3.select(".scroll-post-bottom").selectAll("#scroll-post-bottom")
 			.data(bottomsort)
@@ -172,10 +172,10 @@ function getBottoms() {
 	        .style("background-position","center")
 	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
-	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
 
-	};
+	// };
 	
 	        // end getcsv
 			});
@@ -201,24 +201,24 @@ function getEnsembles() {
 			  console.log(fullbodysort.length);
 
 
-	for (i=0;i<fullbodysort.length;i++){
+	// for (i=0;i<fullbodysort.length;i++){
 		d3.select(".scroll-post-fullbody").selectAll("img").remove();
 		var myEnsembles = d3.select(".scroll-post-fullbody").selectAll("#scroll-post-fullbody")
 			.data(fullbodysort)
 	        .enter()
-	        // .append('a')
-	        // .attr("href",function(d) {return d.link})
-	        // .attr("target","_blank")
+	        .append('a')
+	        .attr("href",function(d) {return d.link})
+	        .attr("target","_blank")
 	        .append('img')
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
 	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
-	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
 
-	};
+	// };
 	
 	        // end getcsv
 			});
@@ -243,14 +243,14 @@ function getFeet() {
 			  console.log(feetsort.length);
 
 
-	for (i=0;i<feetsort.length;i++){
+	// for (i=0;i<feetsort.length;i++){
 		d3.select(".scroll-post-feet").selectAll("img").remove();
 		var myFeet = d3.select(".scroll-post-feet").selectAll("#scroll-post-feet")
 			.data(feetsort)
 	        .enter()
-	        // .append('a')
-	        // .attr("href",function(d) {return d.link})
-	        // .attr("target","_blank")
+	        .append('a')
+	        .attr("href",function(d) {return d.link})
+	        .attr("target","_blank")
 	        .append('img')
 	       	.style("width","40px")
 	        .style("max-height","80px")
@@ -258,10 +258,10 @@ function getFeet() {
 	        .style("vertical-align","middle")
 	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
-	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
 
-	};
+	// };
 	
 	        // end getcsv
 			});
@@ -287,24 +287,24 @@ function getAcc() {
 			  console.log(accsort.length);
 
 
-	for (i=0;i<accsort.length;i++){
+	// for (i=0;i<accsort.length;i++){
 		d3.select(".scroll-post-acc").selectAll("img").remove();
 		var myAcc = d3.select(".scroll-post-acc").selectAll("#scroll-post-acc")
 			.data(accsort)
 	        .enter()
-	        // .append('a')
-	        // .attr("href",function(d) {return d.link})
-	        // .attr("target","_blank")
+	        .append('a')
+	        .attr("href",function(d) {return d.link})
+	        .attr("target","_blank")
 	        .append('img')
 	       	.style("width","50px")
 	        .style("max-height","100px")
 	        .style("background-position","center")
 	        .attr("alt", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
-	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
 
-	};
+	// };
 	
 	        // end getcsv
 			});
