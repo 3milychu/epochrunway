@@ -154,7 +154,7 @@ function updateStart() {
 	        .style("background-size","100%")
 	       	.attr("alt", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
 	        .attr("title", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .attr("class", "target")
 	        .attr("id", "target1")
 	        .exit();
@@ -198,7 +198,7 @@ function updateStart() {
 	        .style("background-size","100%")
 	       	.attr("alt", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
 	        .attr("title", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .attr("class", "target")
 	        .attr("id", "target1")
 	        .exit();
@@ -245,7 +245,7 @@ function updateStart() {
 	        .style("background-size","100%")
 	        .attr("alt", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
 	        .attr("title", function(d){return "(Dated " + d.objectBegin + ") " + d.credit})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .attr("class", "target")
 	        .attr("id", "target1")
 	        .exit();
