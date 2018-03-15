@@ -122,7 +122,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	};
@@ -153,7 +153,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	};
@@ -184,7 +184,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	};
@@ -211,7 +211,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	d3.select(".caption-feet").selectAll("text").remove();
@@ -252,7 +252,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	};
@@ -279,7 +279,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	d3.select(".caption-fullbody").selectAll("text").remove();
@@ -316,7 +316,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	d3.select(".top-head").selectAll("a").remove();
@@ -341,7 +341,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	d3.select(".bottom-head").selectAll("a").remove();
@@ -366,7 +366,7 @@ function updateStart() {
 	        .style("background-size","30%")
 	        .attr("alt", function(d){return d.Medium})
 	        .attr("title", function(d){return d.Medium})
-	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img2+".png";})
+	        .attr("src",function(d) {return "https://raw.githubusercontent.com/3milychu/majorstudio/master/" + d.folder + "/" + d.img3+".png";})
 	        .exit();
 
 	d3.select(".caption-head").selectAll("text").remove();
