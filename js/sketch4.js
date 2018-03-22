@@ -284,7 +284,7 @@ function getAcc() {
 
 			// feet
 			  acc = data.filter(function(d) { 
-			    	return d.bodyclass1 == "accessory" });
+			    	return d.bodyclass1 == "accessory" && (d.bodyclass2 == "hand" | d.bodyclass2 == "hand")});
 
 			  accsort = acc.sort(d3.ascending);
 			  console.log(accsort.length);
