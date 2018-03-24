@@ -293,7 +293,8 @@ h1 {
 }
 
 #featured {
-	position:absolute;
+/*	position:absolute;*/
+position:relative;
 	height:300px;
 	width:100px;
 	margin-top:-33%;
