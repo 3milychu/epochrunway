@@ -51,6 +51,10 @@ img {
     margin-top:10%;
 }
 
+.header h1 {
+    margin-left:-5%;
+}
+
 h1 {
     font-family: 'GFS Didot', serif;
     margin:auto;
