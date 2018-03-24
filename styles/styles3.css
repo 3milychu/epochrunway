@@ -14,6 +14,7 @@
 }
 
 .mobileMessage p {
+    font-family: 'GFS Didot', serif;
     font-size:2em;
     display:block;
 }
