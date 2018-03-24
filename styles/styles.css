@@ -95,14 +95,14 @@ h1 {
 
 #decor-top{
 	margin-top:-41%;
-	animation: dip-down 10s infinite;
-	-webkit-animation: dip-down 10s infinite;
+	animation: dip-down 5s infinite;
+	-webkit-animation: dip-down 5s infinite;
 }
 
 #decor-bottom{
 	margin-top:-1%;
-	animation: dip-up 10s infinite;
-	-webkit-animation: dip-up 10s infinite;
+	animation: dip-up 5s infinite;
+	-webkit-animation: dip-up 5s infinite;
 }
 
 #outer-ring{
@@ -114,8 +114,8 @@ h1 {
 	width:400px;
 	background-color:#534741;
 	z-index:98;
-	animation: counter-spin 20s infinite;
-	-webkit-animation: counter-spin 20s infinite;
+	animation: counter-spin 4s infinite;
+	-webkit-animation: counter-spin 4s infinite;
 }
 
 #inner-circle {
@@ -253,8 +253,8 @@ h1 {
 	margin-left:25%;
 	height:500px;
 	width:500px;
-	animation: spin 10s infinite;
-	-webkit-animation: spin 10s infinite;
+	animation: spin 5s infinite;
+	-webkit-animation: spin 5s infinite;
 	z-index:0;
 
 }
@@ -286,7 +286,8 @@ h1 {
 
 @keyframes scale {
 	0% {transform:scale(0);opacity:0;}
-	10%	{transform:scale(1);opacity:1;}
+	5% {transform:scale(0);opacity:0;}
+	30%	{transform:scale(1);opacity:1;}
 	99%	{transform:scale(1);opacity:1;}
 	100% {transform:scale(0);opacity:0;}
 }
@@ -299,7 +300,7 @@ h1 {
 	margin-left:42%;
 	transform:rotate(-10deg);
 	z-index:101;
-	animation: scale 15s infinite;
+	animation: scale 3s infinite;
 }
 
 #featured-head {
@@ -495,7 +496,7 @@ h1 {
 	height:500px;
 	width:500px;
 	animation: spin 10s infinite;
-	-webkit-animation: spin 10s infinite;
+	-webkit-animation: spin 2s infinite;
 	z-index:0;
 	}
 	.header {
@@ -533,8 +534,8 @@ h1 {
 	width:400px;
 	background-color:#534741;
 	z-index:98;
-	animation: counter-spin 20s infinite;
-	-webkit-animation: counter-spin 20s infinite;
+	animation: counter-spin 4s infinite;
+	-webkit-animation: counter-spin 4s infinite;
 }
 
 

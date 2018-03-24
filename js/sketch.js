@@ -17,7 +17,7 @@ function setup(){
 
 	window.setInterval(function(){
 	updateStart();
-	}, 15000);
+	}, 3000);
 
 	};
 
