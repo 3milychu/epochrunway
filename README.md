@@ -12,4 +12,4 @@ The build uses R, opencv, d3.js and jquery to reclass parts of the body that obj
 
 ## Documentation
 
-Outlined process can be found at 3milychu.github.io/culturaldata
+Outlined process can be found at 3milychu.github.io/computationalart
