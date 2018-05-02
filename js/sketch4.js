@@ -76,7 +76,6 @@ function getHeadwear() {
 			  console.log(headsort.length);
 
 
-	// for (i=0;i<headsort.length;i++){
 		d3.select(".scroll-post-head").selectAll("img").remove();
 		var myHeadwear = d3.select(".scroll-post-head").selectAll("#scroll-post-head")
 			.data(headsort)
@@ -92,8 +91,6 @@ function getHeadwear() {
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
-
-	// };
 	
 	        // end getcsv
 			});
@@ -118,9 +115,6 @@ function getTops() {
 			  topsort = tops.sort(d3.ascending);
 			  console.log(topsort.length);
 
-
-	// for (i=0;i<topsort.length;i++){
-
 		d3.select(".scroll-post-top").selectAll("img").remove();
 		var myTops = d3.select(".scroll-post-top").selectAll("#scroll-post-top")
 			.data(topsort)
@@ -136,8 +130,6 @@ function getTops() {
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
-
-	// };
 	
 	        // end getcsv
 			});
@@ -161,8 +153,6 @@ function getBottoms() {
 			  bottomsort = bottoms.sort(d3.ascending);
 			  console.log(bottomsort.length);
 
-
-	// for (i=0;i<bottomsort.length;i++){
 		d3.select(".scroll-post-bottom").selectAll("img").remove();
 		var myBottoms = d3.select(".scroll-post-bottom").selectAll("#scroll-post-bottom")
 			.data(bottomsort)
@@ -179,7 +169,6 @@ function getBottoms() {
 	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
 
-	// };
 	
 	        // end getcsv
 			});
@@ -204,8 +193,6 @@ function getEnsembles() {
 			  fullbodysort = fullbody.sort(d3.ascending);
 			  console.log(fullbodysort.length);
 
-
-	// for (i=0;i<fullbodysort.length;i++){
 		d3.select(".scroll-post-fullbody").selectAll("img").remove();
 		var myEnsembles = d3.select(".scroll-post-fullbody").selectAll("#scroll-post-fullbody")
 			.data(fullbodysort)
@@ -221,8 +208,6 @@ function getEnsembles() {
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
-
-	// };
 	
 	        // end getcsv
 			});
@@ -246,8 +231,6 @@ function getFeet() {
 			  feetsort = feet.sort(d3.ascending);
 			  console.log(feetsort.length);
 
-
-	// for (i=0;i<feetsort.length;i++){
 		d3.select(".scroll-post-feet").selectAll("img").remove();
 		var myFeet = d3.select(".scroll-post-feet").selectAll("#scroll-post-feet")
 			.data(feetsort)
@@ -264,8 +247,6 @@ function getFeet() {
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
-
-	// };
 	
 	        // end getcsv
 			});
@@ -290,8 +271,6 @@ function getAcc() {
 			  accsort = acc.sort(d3.ascending);
 			  console.log(accsort.length);
 
-
-	// for (i=0;i<accsort.length;i++){
 		d3.select(".scroll-post-acc").selectAll("img").remove();
 		var myAcc = d3.select(".scroll-post-acc").selectAll("#scroll-post-acc")
 			.data(accsort)
@@ -307,8 +286,6 @@ function getAcc() {
 	        .attr("title", function(d){return d.Title +", " + d.objectBegin + ", " + d.Culture})
 	        .attr("src",function(d) {return "assets/" + d.folder + "/" + d.img2+".png";})
 	        .exit();
-
-	// };
 	
 	        // end getcsv
 			});
