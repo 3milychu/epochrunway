@@ -21,7 +21,9 @@ function setup(){
 	updateStart();
 	}, 5000);
 
-	location.reload();
+	window.onload = function () {window.location.reload()}
+
+	document.getElementById("loading-overlay").style.opacity="0";
 	};
 
 function playTrack(){

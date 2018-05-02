@@ -19,9 +19,12 @@ function setup(){
 	updateStart();
 	}, 3000);
 
-	location.reload();
+	window.onload = function () {window.location.reload()}
+
+	document.getElementById("loading-overlay").style.opacity="0";
 
 	};
+
 
 function playTrack(){
 	mytrack = str("track"+ Math.floor(Math.random() * 7+1));

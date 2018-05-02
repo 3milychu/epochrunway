@@ -12,6 +12,15 @@ a{
     text-decoration:none;
 }
 
+#loading-overlay {
+    position:absolute;
+    width:100vh;
+    height:100vh;
+    opacity:1;
+    background:white;
+    transition:1s ease;
+}
+
 .container {
     width:100vh;
     height:100vh;
