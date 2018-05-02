@@ -19,6 +19,8 @@ function setup(){
 	updateStart();
 	}, 3000);
 
+	location.reload();
+
 	};
 
 function playTrack(){

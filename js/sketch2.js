@@ -22,7 +22,8 @@ function setup(){
 	window.setInterval(function(){
 	updateStart();
 	}, 3000);
-
+	
+	location.reload();
 	};
 
 function playTrack(){

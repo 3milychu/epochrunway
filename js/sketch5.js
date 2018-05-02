@@ -21,6 +21,7 @@ function setup(){
 	updateStart();
 	}, 5000);
 
+	location.reload();
 	};
 
 function playTrack(){
