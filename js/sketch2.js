@@ -13,8 +13,6 @@ function setup(){
 
 	updateStart();
 
-	playTrack();
-
 	// window.setInterval(function(){
 	// getFact();
 	// }, 10000);
@@ -26,6 +24,8 @@ function setup(){
 	window.onload = function () {window.location.reload()}
 
 	document.getElementById("loading-overlay").style.opacity="0";
+
+	playTrack();
 
 	};
 

@@ -13,8 +13,6 @@ function setup(){
 
 	updateStart();
 
-	playTrack();
-
 	window.setInterval(function(){
 	updateStart();
 	}, 3000);
@@ -23,13 +21,15 @@ function setup(){
 
 	document.getElementById("loading-overlay").style.opacity="0";
 
+	playTrack();
+
 	};
 
 
 function playTrack(){
 	mytrack = str("track"+ Math.floor(Math.random() * 7+1));
 
-	audio = new Audio('audio/' + mytrack +'.mp3');
+	audio = new Audio('audio/track1.mp3');
 	console.log(audio);
 
 	audio.play();
