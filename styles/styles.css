@@ -461,7 +461,7 @@ h1 {
      
     }
   .media-holder iframe {
-      transform: scale(1.5);
+      transform: scale(1.4);
       transform-origin: 0 0;
   }
 }
