@@ -442,7 +442,7 @@ h1 {
     display:block;
 }
 
- @media screen and (min-width:1290px) {
+ @media screen and (min-width:1400px) {
   .media-holder {
       width:100%;
       margin-left:0%;
